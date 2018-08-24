@@ -11,12 +11,8 @@ expCyto = 'SBC-Fortessa';
 expFolder = pwd;
 controlsFolder = [pwd, filesep, 'Controls', filesep];
 
-% Load all data into path
+% Load all data into path, including back end code (since it is in this folder, otherwise add separately)
 addpath(genpath(expFolder));
-
-% Load FACS analysis files into path
-addpath(genpath(['..', filesep, '..', filesep, ...
-	'MATLAB_Flow_Analysis_2018-06-27']))  % Asus
 
 % Create analysis namespaces
 flow = FlowAnalysis();
